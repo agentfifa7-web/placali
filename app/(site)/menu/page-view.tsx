@@ -11,7 +11,15 @@ function OptionGrid({ options, selected, onSelect }: { options: BuilderOption[];
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
       {options.map((option) => (
-        <button key={option.id} type="button" className="chip" aria-pressed={selected === option.id} onClick={() => onSelect(option.id)} style={selected === option.id ? { background: 'var(--terracotta)', borderColor: 'var(--terracotta)', color: '#fff' } : undefined}>
+        <button
+          key={option.id}
+          type="button"
+          className={option.image ? 'chip chip-thumb' : 'chip'}
+          aria-pressed={selected === option.id}
+          onClick={() => onSelect(option.id)}
+          style={selected === option.id ? { background: 'var(--terracotta)', borderColor: 'var(--terracotta)', color: '#fff' } : undefined}
+        >
+          {option.image && <img src={option.image} alt="" />}
           {option.label} · {formatFCFA(option.price)}
         </button>
       ))}

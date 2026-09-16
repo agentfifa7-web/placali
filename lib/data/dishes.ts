@@ -5,7 +5,7 @@ export interface Dish {
   name: string
   description: string
   price: number
-  category: 'Placali' | 'Accompagnements' | 'Grillades' | 'Boissons' | 'Desserts'
+  category: 'Placali' | 'Accompagnements' | 'Garnitures' | 'Grillades' | 'Boissons' | 'Desserts'
   image: string
   tag?: string
   spice: SpiceLevel
@@ -18,11 +18,18 @@ export const dishes: Dish[] = [
   { id: 3, name: 'Placali sauce arachide', description: 'Onctueuse sauce arachide, viande braisée et légumes.', price: 3800, category: 'Placali', image: '/images/dish-table-service.jpg', spice: 1, popular: true },
   { id: 4, name: 'Placali sauce pklala', description: 'Feuilles de pklala mijotées, saveur végétale et fumée.', price: 3600, category: 'Placali', image: '/images/dish-sauce-closeup.jpg', spice: 2 },
   { id: 5, name: 'Placali gouagouassou', description: 'Sauce pimentée intense, spécialité corsée de la maison.', price: 3900, category: 'Placali', image: '/images/dish-placali-ball.jpg', tag: 'Épicé', spice: 3 },
-  { id: 6, name: 'Poisson braisé', description: 'Dorade entière braisée au feu de bois, oignons confits.', price: 4500, category: 'Accompagnements', image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=900&q=85', spice: 0 },
-  { id: 7, name: 'Crabe farci', description: 'Crabe mijoté dans sa carapace, épices douces.', price: 5200, category: 'Accompagnements', image: 'https://images.unsplash.com/photo-1550747545-c896b5f89ff7?auto=format&fit=crop&w=900&q=85', spice: 1 },
-  { id: 8, name: 'Escargots sautés', description: 'Escargots géants d’Abidjan, ail et piment doux.', price: 4800, category: 'Accompagnements', image: 'https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?auto=format&fit=crop&w=900&q=85', spice: 1 },
-  { id: 9, name: 'Viande de bœuf mijotée', description: 'Bœuf fondant, cuisson lente aux épices de la maison.', price: 4200, category: 'Accompagnements', image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85', spice: 0 },
-  { id: 10, name: 'Tripes façon Abouré', description: 'Recette traditionnelle, mijotée longuement aux épices.', price: 3400, category: 'Accompagnements', image: 'https://images.unsplash.com/photo-1607330289024-1535c6b4e1c1?auto=format&fit=crop&w=900&q=85', spice: 2 },
+  { id: 6, name: 'Poisson braisé', description: 'Dorade entière braisée au feu de bois, oignons confits.', price: 4500, category: 'Garnitures', image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=900&q=85', spice: 0 },
+  { id: 7, name: 'Crabe farci', description: 'Crabe mijoté dans sa carapace, épices douces.', price: 5200, category: 'Garnitures', image: 'https://images.unsplash.com/photo-1550747545-c896b5f89ff7?auto=format&fit=crop&w=900&q=85', spice: 1 },
+  { id: 8, name: 'Escargots sautés', description: 'Escargots géants d’Abidjan, ail et piment doux.', price: 4800, category: 'Garnitures', image: 'https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?auto=format&fit=crop&w=900&q=85', spice: 1 },
+  { id: 9, name: 'Viande de bœuf mijotée', description: 'Bœuf fondant, cuisson lente aux épices de la maison.', price: 4200, category: 'Garnitures', image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85', spice: 0 },
+  { id: 10, name: 'Tripes façon Abouré', description: 'Recette traditionnelle, mijotée longuement aux épices.', price: 3400, category: 'Garnitures', image: 'https://images.unsplash.com/photo-1607330289024-1535c6b4e1c1?auto=format&fit=crop&w=900&q=85', spice: 2 },
+  { id: 22, name: 'Attiéké nature', description: 'Semoule de manioc granulée, à la vapeur, servie fraîche.', price: 1000, category: 'Accompagnements', image: '/images/acc-attieke.jpg', spice: 0, popular: true },
+  { id: 23, name: 'Riz blanc', description: 'Riz parfumé cuit à la vapeur, grain à grain.', price: 1000, category: 'Accompagnements', image: '/images/acc-riz-blanc.jpg', spice: 0 },
+  { id: 24, name: 'Riz garni', description: 'Riz blanc parsemé d’herbes fraîches.', price: 1200, category: 'Accompagnements', image: '/images/acc-riz-garni.jpg', spice: 0 },
+  { id: 25, name: 'Igname pilée', description: 'Igname pilée à la main, texture souple et filante.', price: 1500, category: 'Accompagnements', image: '/images/acc-igname-pilee.jpg', spice: 0, popular: true },
+  { id: 26, name: 'Foutou banane', description: 'Banane plantain pilée, moelleuse et légèrement sucrée.', price: 1500, category: 'Accompagnements', image: '/images/acc-foutou-banane.jpg', spice: 0 },
+  { id: 27, name: 'Assortiment foutou', description: 'Sélection de foutou igname et banane, pour partager.', price: 1800, category: 'Accompagnements', image: '/images/acc-assortiment-foutou.jpg', spice: 0 },
+  { id: 28, name: 'Foutou igname', description: 'Igname pilée façon foutou, onctueuse et généreuse.', price: 1500, category: 'Accompagnements', image: '/images/acc-foutou-igname.jpg', spice: 0 },
   { id: 11, name: 'Poulet braisé', description: 'Poulet fermier mariné, braisé au feu de bois.', price: 3900, category: 'Grillades', image: 'https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=900&q=85', spice: 1, popular: true },
   { id: 12, name: 'Brochettes bœuf & poivrons', description: 'Brochettes marinées, grillées minute.', price: 4100, category: 'Grillades', image: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=900&q=85', spice: 1 },
   { id: 13, name: 'Crevettes grillées', description: 'Crevettes royales, beurre à l’ail et citron vert.', price: 5400, category: 'Grillades', image: 'https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=900&q=85', spice: 0 },
@@ -36,15 +43,15 @@ export const dishes: Dish[] = [
   { id: 21, name: 'Salade d’ananas victoria', description: 'Ananas frais, sirop de gingembre.', price: 1800, category: 'Desserts', image: 'https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=900&q=85', spice: 0 },
 ]
 
-export const categories: Dish['category'][] = ['Placali', 'Accompagnements', 'Grillades', 'Boissons', 'Desserts']
+export const categories: Dish['category'][] = ['Placali', 'Accompagnements', 'Garnitures', 'Grillades', 'Boissons', 'Desserts']
 
 export interface BuilderOption { id: string; label: string; price: number; image?: string }
 
 export const builderBases: BuilderOption[] = [
-  { id: 'placali', label: 'Placali', price: 2000 },
-  { id: 'riz', label: 'Riz', price: 1500 },
-  { id: 'attieke', label: 'Attiéké', price: 1500 },
-  { id: 'igname', label: 'Igname', price: 1800 },
+  { id: 'placali', label: 'Placali', price: 2000, image: '/images/dish-placali-ball.jpg' },
+  { id: 'riz', label: 'Riz', price: 1500, image: '/images/acc-riz-blanc.jpg' },
+  { id: 'attieke', label: 'Attiéké', price: 1500, image: '/images/acc-attieke.jpg' },
+  { id: 'igname', label: 'Igname', price: 1800, image: '/images/acc-igname-pilee.jpg' },
 ]
 
 export const builderSauces: BuilderOption[] = [
