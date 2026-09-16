@@ -1,6 +1,12 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { articles } from '@/lib/data/content'
+
+export const metadata: Metadata = {
+  title: 'Magazine',
+  description: 'Gastronomie, recettes traditionnelles, portraits de chefs et culture ivoirienne : le magazine Abouré.',
+}
 
 export default function MagazinePage() {
   const [hero, ...rest] = articles

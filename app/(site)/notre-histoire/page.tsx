@@ -1,4 +1,10 @@
+import type { Metadata } from 'next'
 import { testimonials } from '@/lib/data/content'
+
+export const metadata: Metadata = {
+  title: 'Notre histoire',
+  description: 'Origine, fondateurs, évolution et valeurs de Placali Abouré, de la transmission familiale à l’écosystème digital.',
+}
 
 const milestones = [
   { year: '2011', title: 'Les origines', text: 'À Abouré, une grand-mère transmet ses recettes de placali à ses petits-enfants, autour du pilon familial.' },

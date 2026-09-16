@@ -1,4 +1,10 @@
+import type { Metadata } from 'next'
 import { chefs, producers } from '@/lib/data/content'
+
+export const metadata: Metadata = {
+  title: 'Notre savoir-faire',
+  description: 'Découvrez nos chefs et nos producteurs locaux : manioc, huile de palme, poissons de lagune et épices.',
+}
 
 export default function SavoirFairePage() {
   return (

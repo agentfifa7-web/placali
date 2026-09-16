@@ -1,5 +1,11 @@
+import type { Metadata } from 'next'
 import { clientOfWeek, communityPosts, testimonials } from '@/lib/data/content'
 import { Star } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Communauté',
+  description: '#MonPlacaliAbouré : la communauté, la galerie et les avis clients.',
+}
 
 export default function CommunautePage() {
   return (

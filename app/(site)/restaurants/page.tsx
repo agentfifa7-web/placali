@@ -1,6 +1,12 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, Clock3, MapPin, Phone, Truck } from 'lucide-react'
 import { restaurants } from '@/lib/data/restaurants'
+
+export const metadata: Metadata = {
+  title: 'Nos restaurants',
+  description: 'Trouvez votre Placali Abouré à Cocody, Zone 4 ou Bingerville : adresse, horaires, services et zone de livraison.',
+}
 
 export default function RestaurantsPage() {
   return (

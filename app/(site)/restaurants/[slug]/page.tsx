@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowRight, Clock3, MapPin, Phone, Truck } from 'lucide-react'
@@ -5,6 +6,13 @@ import { restaurantBySlug, restaurants } from '@/lib/data/restaurants'
 
 export function generateStaticParams() {
   return restaurants.map((restaurant) => ({ slug: restaurant.slug }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const restaurant = restaurantBySlug(slug)
+  if (!restaurant) return { title: 'Restaurant introuvable' }
+  return { title: `Restaurant ${restaurant.city}`, description: `${restaurant.address}, ${restaurant.city} · ${restaurant.hours}` }
 }
 
 export default async function RestaurantDetailPage({ params }: { params: Promise<{ slug: string }> }) {
