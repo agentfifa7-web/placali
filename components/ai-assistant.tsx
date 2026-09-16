@@ -1,10 +1,10 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
-import { ArrowUp, Sparkles, X } from 'lucide-react'
+import { ArrowUp, Check, Plus, Sparkles, X } from 'lucide-react'
 import { askAboure, type AssistantReply } from '@/lib/assistant'
 import { formatFCFA } from '@/lib/format'
+import { useCart } from '@/lib/store'
 
 interface Message {
   role: 'bot' | 'user'
@@ -15,11 +15,18 @@ interface Message {
 const starterSuggestions = ['Je veux quelque chose de pas trop épicé', 'Je suis 8 personnes, que me conseillez-vous ?', 'Vos horaires ?', 'Comment réserver une table ?']
 
 export function AIAssistant() {
+  const { addItem } = useCart()
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState<Message[]>([
     { role: 'bot', text: 'Bonjour, je suis Abouré, votre assistant. Demandez-moi un plat, une réservation ou nos promotions du moment.' },
   ])
   const [input, setInput] = useState('')
+  const [addedIds, setAddedIds] = useState<number[]>([])
+
+  function addDish(id: number, name: string, price: number, image: string) {
+    addItem({ id: `dish-${id}`, name, unitPrice: price, image })
+    setAddedIds((current) => [...current, id])
+  }
 
   function send(text: string) {
     if (!text.trim()) return
@@ -53,12 +60,22 @@ export function AIAssistant() {
                 <p style={{ margin: 0 }}>{message.text}</p>
                 {message.dishes && message.dishes.length > 0 && (
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 10 }}>
-                    {message.dishes.map((dish) => (
-                      <Link key={dish.id} href="/menu" style={{ background: '#fff', border: '1px solid var(--line)', display: 'flex', justifyContent: 'space-between', padding: '8px 10px' }}>
-                        <span>{dish.name}</span>
-                        <strong>{formatFCFA(dish.price)}</strong>
-                      </Link>
-                    ))}
+                    {message.dishes.map((dish) => {
+                      const added = addedIds.includes(dish.id)
+                      return (
+                        <button
+                          key={dish.id}
+                          onClick={() => !added && addDish(dish.id, dish.name, dish.price, dish.image)}
+                          style={{ alignItems: 'center', background: '#fff', border: '1px solid var(--line)', display: 'flex', gap: 8, justifyContent: 'space-between', padding: '8px 10px', textAlign: 'left' }}
+                        >
+                          <span>{dish.name}</span>
+                          <span style={{ alignItems: 'center', display: 'flex', gap: 8, flexShrink: 0 }}>
+                            <strong>{formatFCFA(dish.price)}</strong>
+                            {added ? <Check size={14} style={{ color: 'var(--forest)' }} /> : <Plus size={14} style={{ color: 'var(--terracotta)' }} />}
+                          </span>
+                        </button>
+                      )
+                    })}
                   </div>
                 )}
               </div>

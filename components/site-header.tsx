@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { ChevronDown, Menu, ShoppingBag, User, X } from 'lucide-react'
 import { useCart } from '@/lib/store'
@@ -27,6 +27,23 @@ export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [moreOpen, setMoreOpen] = useState(false)
   const { count } = useCart()
+  const moreRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!moreOpen) return
+    function handleClick(event: MouseEvent) {
+      if (moreRef.current && !moreRef.current.contains(event.target as Node)) setMoreOpen(false)
+    }
+    function handleKey(event: KeyboardEvent) {
+      if (event.key === 'Escape') setMoreOpen(false)
+    }
+    document.addEventListener('mousedown', handleClick)
+    document.addEventListener('keydown', handleKey)
+    return () => {
+      document.removeEventListener('mousedown', handleClick)
+      document.removeEventListener('keydown', handleKey)
+    }
+  }, [moreOpen])
 
   return (
     <>
@@ -49,14 +66,20 @@ export function SiteHeader() {
               {link.label}
             </Link>
           ))}
-          <div className="nav-more" onMouseEnter={() => setMoreOpen(true)} onMouseLeave={() => setMoreOpen(false)}>
-            <button type="button" style={{ alignItems: 'center', background: 'none', border: 0, color: '#62574e', display: 'flex', fontSize: 12, fontWeight: 600, gap: 4 }}>
+          <div className="nav-more" ref={moreRef}>
+            <button
+              type="button"
+              onClick={() => setMoreOpen((current) => !current)}
+              aria-expanded={moreOpen}
+              aria-haspopup="true"
+              style={{ alignItems: 'center', background: 'none', border: 0, color: '#62574e', display: 'flex', fontSize: 12, fontWeight: 600, gap: 4 }}
+            >
               Découvrir <ChevronDown size={13} />
             </button>
             {moreOpen && (
               <div className="nav-more-panel">
                 {moreLinks.map((link) => (
-                  <Link key={link.href} href={link.href}>
+                  <Link key={link.href} href={link.href} onClick={() => setMoreOpen(false)}>
                     {link.label}
                   </Link>
                 ))}

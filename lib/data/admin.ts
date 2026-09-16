@@ -35,9 +35,9 @@ export const neighborhoods = [
 export const recentOrders = [
   { id: 'PA-28448', client: 'Aïcha K.', restaurant: 'Cocody', total: 8500, status: 'Livrée', date: '2026-09-15T18:20:00' },
   { id: 'PA-28449', client: 'Yves-Marie D.', restaurant: 'Zone 4', total: 12200, status: 'Livrée', date: '2026-09-15T19:05:00' },
-  { id: 'PA-28450', client: 'Fatou B.', restaurant: 'Bingerville', total: 6400, status: 'En route', date: '2026-09-16T12:10:00' },
-  { id: 'PA-28451', client: 'Serge A.', restaurant: 'Cocody', total: 9800, status: 'En préparation', date: '2026-09-16T12:32:00' },
-  { id: 'PA-28452', client: 'Nafi K.', restaurant: 'Zone 4', total: 15400, status: 'Reçue', date: '2026-09-16T12:41:00' },
+  { id: 'PA-28450', client: 'Fatou B.', restaurant: 'Bingerville', total: 6400, status: 'Livreur en route', date: '2026-09-16T12:10:00' },
+  { id: 'PA-28451', client: 'Serge A.', restaurant: 'Cocody', total: 9800, status: 'Cuisine en préparation', date: '2026-09-16T12:32:00' },
+  { id: 'PA-28452', client: 'Nafi K.', restaurant: 'Zone 4', total: 15400, status: 'Commande reçue', date: '2026-09-16T12:41:00' },
 ]
 
 export interface KitchenOrder {
