@@ -24,7 +24,7 @@ export const restaurants: Restaurant[] = [
     phone: '+225 07 07 07 07 07',
     services: ['Sur place', 'À emporter', 'Livraison', 'Espace privé'],
     deliveryZone: 'Cocody, Riviera, II Plateaux',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85',
+    image: '/images/restaurant-interior.webp',
     orders: 142,
     revenue: 1800000,
     clients: 118,

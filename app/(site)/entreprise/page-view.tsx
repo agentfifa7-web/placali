@@ -19,7 +19,7 @@ export default function EntreprisePage() {
 
   return (
     <>
-      <section className="page-hero" style={{ ['--hero-bg' as string]: "url('https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=1600&q=85')" }}>
+      <section className="page-hero" style={{ ['--hero-bg' as string]: "url('/images/dish-table-service.jpg')" }}>
         <span className="crumb">Espace entreprise</span>
         <h1>
           La gastronomie
@@ -96,7 +96,7 @@ export default function EntreprisePage() {
               </form>
             )}
           </div>
-          <div className="story-photo" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=1000&q=85')", minHeight: 380 }} />
+          <div className="story-photo" style={{ backgroundImage: "url('/images/dish-table-service.jpg')", minHeight: 380 }} />
         </div>
       </section>
     </>

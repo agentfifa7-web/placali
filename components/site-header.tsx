@@ -54,7 +54,9 @@ export function SiteHeader() {
       </div>
       <header className="navbar">
         <Link href="/" className="brand" aria-label="Placali Abouré, accueil">
-          <span className="brand-mark">PA</span>
+          <span className="brand-mark">
+            <img src="/images/logo.png" alt="" />
+          </span>
           <span>
             <strong>PLACALI</strong>
             <em>ABOURÉ</em>

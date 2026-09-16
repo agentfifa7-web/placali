@@ -33,7 +33,7 @@ export default function ReservationPage() {
 
   return (
     <>
-      <section className="page-hero" style={{ ['--hero-bg' as string]: "url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=85')" }}>
+      <section className="page-hero" style={{ ['--hero-bg' as string]: "url('/images/restaurant-interior.webp')" }}>
         <span className="crumb">Réservation de table</span>
         <h1>
           Une place
@@ -130,7 +130,7 @@ export default function ReservationPage() {
           )}
         </div>
 
-        <div className="story-photo" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85')", minHeight: 420 }} />
+        <div className="story-photo" style={{ backgroundImage: "url('/images/restaurant-interior.webp')", minHeight: 420 }} />
       </section>
     </>
   )

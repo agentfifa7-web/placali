@@ -21,8 +21,8 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
     <div className="admin-shell">
       <aside className="admin-side">
         <Link href="/" className="brand brand-light" style={{ marginBottom: 34 }}>
-          <span className="brand-mark" style={{ borderColor: '#dca34c', color: '#dca34c' }}>
-            PA
+          <span className="brand-mark" style={{ borderColor: '#dca34c' }}>
+            <img src="/images/logo.png" alt="" />
           </span>
           <span>
             <strong style={{ color: '#fff' }}>PLACALI</strong>

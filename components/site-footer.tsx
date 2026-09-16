@@ -6,7 +6,9 @@ export function SiteFooter() {
     <footer id="contact" className="footer">
       <div className="footer-brand">
         <Link href="/" className="brand brand-light">
-          <span className="brand-mark">PA</span>
+          <span className="brand-mark">
+            <img src="/images/logo.png" alt="" />
+          </span>
           <span>
             <strong>PLACALI</strong>
             <em>ABOURÉ</em>

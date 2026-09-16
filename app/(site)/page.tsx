@@ -17,7 +17,12 @@ export default function HomePage() {
   return (
     <>
       <section id="accueil" className="hero">
-        <div className="hero-image" />
+        <div className="hero-video-wrap">
+          <video className="hero-video" autoPlay muted loop playsInline poster="/images/dish-table-service.jpg">
+            <source src="/videos/hero.mp4" type="video/mp4" />
+          </video>
+          <div className="hero-video-overlay" />
+        </div>
         <div className="hero-content">
           <p className="eyebrow light">Cuisine ivoirienne · depuis 2018</p>
           <h1>

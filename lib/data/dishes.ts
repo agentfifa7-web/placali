@@ -13,11 +13,11 @@ export interface Dish {
 }
 
 export const dishes: Dish[] = [
-  { id: 1, name: 'Placali sauce graine', description: 'Pâte de manioc souple, sauce graine de palme et poisson fumé.', price: 3500, category: 'Placali', image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85', tag: 'Signature', spice: 1, popular: true },
-  { id: 2, name: 'Placali sauce kopè', description: 'Sauce crabe et fruits de mer relevée, pâte de manioc filante.', price: 4200, category: 'Placali', image: 'https://images.unsplash.com/photo-1626200926749-93e5e7e2b0ee?auto=format&fit=crop&w=900&q=85', spice: 2 },
-  { id: 3, name: 'Placali sauce arachide', description: 'Onctueuse sauce arachide, viande braisée et légumes.', price: 3800, category: 'Placali', image: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85', spice: 1, popular: true },
-  { id: 4, name: 'Placali sauce pklala', description: 'Feuilles de pklala mijotées, saveur végétale et fumée.', price: 3600, category: 'Placali', image: 'https://images.unsplash.com/photo-1604909052743-94e838986d24?auto=format&fit=crop&w=900&q=85', spice: 2 },
-  { id: 5, name: 'Placali gouagouassou', description: 'Sauce pimentée intense, spécialité corsée de la maison.', price: 3900, category: 'Placali', image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=900&q=85', tag: 'Épicé', spice: 3 },
+  { id: 1, name: 'Placali sauce graine', description: 'Pâte de manioc souple, sauce graine de palme et poisson fumé.', price: 3500, category: 'Placali', image: '/images/dish-sauce-verte.webp', tag: 'Signature', spice: 1, popular: true },
+  { id: 2, name: 'Placali sauce kopè', description: 'Sauce crabe et fruits de mer relevée, pâte de manioc filante.', price: 4200, category: 'Placali', image: '/images/dish-crabe-sauce.jpg', spice: 2 },
+  { id: 3, name: 'Placali sauce arachide', description: 'Onctueuse sauce arachide, viande braisée et légumes.', price: 3800, category: 'Placali', image: '/images/dish-table-service.jpg', spice: 1, popular: true },
+  { id: 4, name: 'Placali sauce pklala', description: 'Feuilles de pklala mijotées, saveur végétale et fumée.', price: 3600, category: 'Placali', image: '/images/dish-sauce-closeup.jpg', spice: 2 },
+  { id: 5, name: 'Placali gouagouassou', description: 'Sauce pimentée intense, spécialité corsée de la maison.', price: 3900, category: 'Placali', image: '/images/dish-placali-ball.jpg', tag: 'Épicé', spice: 3 },
   { id: 6, name: 'Poisson braisé', description: 'Dorade entière braisée au feu de bois, oignons confits.', price: 4500, category: 'Accompagnements', image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=900&q=85', spice: 0 },
   { id: 7, name: 'Crabe farci', description: 'Crabe mijoté dans sa carapace, épices douces.', price: 5200, category: 'Accompagnements', image: 'https://images.unsplash.com/photo-1550747545-c896b5f89ff7?auto=format&fit=crop&w=900&q=85', spice: 1 },
   { id: 8, name: 'Escargots sautés', description: 'Escargots géants d’Abidjan, ail et piment doux.', price: 4800, category: 'Accompagnements', image: 'https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?auto=format&fit=crop&w=900&q=85', spice: 1 },

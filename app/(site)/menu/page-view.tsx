@@ -53,7 +53,7 @@ export default function MenuPage() {
 
   return (
     <>
-      <section className="page-hero" style={{ ['--hero-bg' as string]: "url('https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1600&q=85')" }}>
+      <section className="page-hero" style={{ ['--hero-bg' as string]: "url('/images/dish-crabe-sauce.jpg')" }}>
         <span className="crumb">Menu digital interactif</span>
         <h1>
           Nos saveurs,
